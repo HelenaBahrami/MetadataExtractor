@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  app-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./images:/app/images
+      - ./result:/app/result
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["python", "image_metadata_extractor.py", "-i", "images", "-o", "result"]
+
+  app-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./images:/app/images
+      - ./result:/app/result
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["python", "image_metadata_extractor.py", "-i", "images", "-o", "result"]
