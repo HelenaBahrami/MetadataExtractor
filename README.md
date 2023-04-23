@@ -15,5 +15,5 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
 
 
-###To Do:
+### To Do:
 Create a terraform file with all the required resources for both development and production environments
