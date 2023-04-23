@@ -13,3 +13,7 @@ To run the docker-compose.yml file use the following command:
 ```
 docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 ```
+
+
+###To Do:
+Create a terraform file with all the required resources for both development and production environments
